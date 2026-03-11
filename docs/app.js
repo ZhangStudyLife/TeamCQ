@@ -109,9 +109,10 @@ function bindBaseEvents() {
   document.getElementById("jump-tomorrow").addEventListener("click", () => jumpRelative(1));
   document.getElementById("jump-current-week").addEventListener("click", () => {
     if (!state.dataset) return;
-    state.week = clampWeek(state.dataset.current_week, 1);
-    state.weekday = state.dataset.current_weekday;
-    state.date = toIsoDate(deriveDate(state.week, state.weekday));
+    const today = getBrowserToday();
+    state.week = clampWeek(dateToWeek(today), 1);
+    state.weekday = today.getDay() === 0 ? 7 : today.getDay();
+    state.date = toIsoDate(today);
     syncQueryInputs();
     render();
   });
@@ -156,10 +157,11 @@ async function loadDataset() {
       throw new Error(`HTTP ${response.status}`);
     }
     state.dataset = await response.json();
-    state.week = clampWeek(state.dataset.current_week || 1, 1);
-    state.weekday = state.dataset.current_weekday || 1;
+    const today = getBrowserToday();
+    state.week = clampWeek(dateToWeek(today), 1);
+    state.weekday = today.getDay() === 0 ? 7 : today.getDay();
     state.scope = "all_day";
-    state.date = toIsoDate(deriveDate(state.week, state.weekday));
+    state.date = toIsoDate(today);
     state.selectedPeople = allPeopleNames();
     renderWeekdayPills();
     renderPeopleFilters();
@@ -560,7 +562,7 @@ function allPeopleNames() {
 
 function jumpRelative(offsetDays) {
   if (!state.dataset) return;
-  const base = fromIsoDate(state.dataset.today) || new Date();
+  const base = getBrowserToday();
   base.setDate(base.getDate() + offsetDays);
   state.date = toIsoDate(base);
   state.week = clampWeek(dateToWeek(base), 1);
@@ -590,14 +592,14 @@ function parseNaturalQuestion(question) {
     return parsed;
   }
   if (text.includes("今天")) {
-    const today = fromIsoDate(state.dataset.today) || new Date();
+    const today = getBrowserToday();
     parsed.date = toIsoDate(today);
     parsed.week = dateToWeek(today);
     parsed.weekday = today.getDay() === 0 ? 7 : today.getDay();
     return parsed;
   }
   if (text.includes("明天")) {
-    const tomorrow = fromIsoDate(state.dataset.today) || new Date();
+    const tomorrow = getBrowserToday();
     tomorrow.setDate(tomorrow.getDate() + 1);
     parsed.date = toIsoDate(tomorrow);
     parsed.week = dateToWeek(tomorrow);
@@ -608,9 +610,9 @@ function parseNaturalQuestion(question) {
   if (weekMatch) {
     parsed.week = clampWeek(Number(weekMatch[1]) || 1, 1);
   } else if (text.includes("本周") || text.includes("这周")) {
-    parsed.week = state.dataset.current_week;
+    parsed.week = clampWeek(dateToWeek(getBrowserToday()), 1);
   } else if (text.includes("下周")) {
-    parsed.week = clampWeek(state.dataset.current_week + 1, 1);
+    parsed.week = clampWeek(dateToWeek(getBrowserToday()) + 1, 1);
   }
   const weekdayMatch = text.match(/(?:周|星期)([一二三四五六日天])/);
   if (weekdayMatch) {
@@ -629,7 +631,7 @@ function parseExplicitDate(text) {
   }
   const monthDay = text.match(/(?:(20\d{2})年)?\s*(\d{1,2})月(\d{1,2})[日号]?/);
   if (monthDay) {
-    const year = Number(monthDay[1] || fromIsoDate(state.dataset.today).getFullYear());
+    const year = Number(monthDay[1] || getBrowserToday().getFullYear());
     return new Date(year, Number(monthDay[2]) - 1, Number(monthDay[3]));
   }
   return null;
@@ -659,6 +661,11 @@ function fromIsoDate(value) {
   const parts = String(value).split("-");
   if (parts.length !== 3) return null;
   return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+}
+
+function getBrowserToday() {
+  const now = new Date();
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
 }
 
 function toIsoDate(dateValue) {
