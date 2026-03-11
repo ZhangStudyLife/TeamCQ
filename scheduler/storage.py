@@ -326,7 +326,7 @@ class Database:
             "week": week,
             "total_people": len(people),
             "heatmap": heatmap,
-            "rankings": rankings[:5],
+            "rankings": rankings[:10],
         }
 
     def compute_availability(

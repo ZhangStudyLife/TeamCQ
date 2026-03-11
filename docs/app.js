@@ -380,7 +380,8 @@ function renderRankings(collaboration) {
     refs.rankingsRoot.innerHTML = `<div class="empty-state">至少选择 1 个人后，才会生成排行。</div>`;
     return;
   }
-  const buildCards = () => collaboration.rankings.map((item, index) => `
+  refs.rankingsRoot.scrollTop = 0;
+  refs.rankingsRoot.innerHTML = collaboration.rankings.map((item, index) => `
     <a href="#" class="ranking-card" data-week="${item.week}" data-weekday="${item.weekday}" data-scope="${item.scope}">
       <span class="ranking-index">${index + 1}</span>
       <div>
@@ -390,14 +391,6 @@ function renderRankings(collaboration) {
       </div>
     </a>
   `).join("");
-  refs.rankingsRoot.innerHTML = `
-    <div class="ranking-marquee">
-      <div class="ranking-track">
-        <div class="ranking-column">${buildCards()}</div>
-        <div class="ranking-column" aria-hidden="true">${buildCards()}</div>
-      </div>
-    </div>
-  `;
   refs.rankingsRoot.querySelectorAll(".ranking-card").forEach((card) => {
     card.addEventListener("click", (event) => {
       event.preventDefault();
@@ -607,7 +600,7 @@ function buildCollaboration(selectedPeople, week) {
   return {
     totalPeople: selectedPeople.length,
     rows,
-    rankings: rankings.slice(0, 5),
+    rankings: rankings.slice(0, 10),
   };
 }
 

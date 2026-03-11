@@ -1313,6 +1313,25 @@ def _layout(title: str, body: str) -> str:
     .ranking-list {{
       display: grid;
       gap: 10px;
+      max-height: 420px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior: contain;
+      padding-right: 6px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(182, 84, 13, 0.38) transparent;
+    }}
+    .ranking-list::-webkit-scrollbar {{
+      width: 10px;
+    }}
+    .ranking-list::-webkit-scrollbar-track {{
+      background: transparent;
+    }}
+    .ranking-list::-webkit-scrollbar-thumb {{
+      border: 2px solid transparent;
+      border-radius: 999px;
+      background: rgba(182, 84, 13, 0.38);
+      background-clip: padding-box;
     }}
     .ranking-card {{
       display: grid;
@@ -1561,7 +1580,7 @@ def _render_home_page(config: dict[str, str], availability: dict, current_contex
           {_render_collaboration_heatmap(availability)}
         </div>
         <div>
-          <h3 style="margin-bottom: 10px;">人最齐时段 Top 5</h3>
+          <h3 style="margin-bottom: 10px;">人最齐时段 Top 10</h3>
           {_render_collaboration_rankings(availability)}
         </div>
       </div>

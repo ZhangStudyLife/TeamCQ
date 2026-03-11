@@ -107,7 +107,7 @@ class ImportFlowTest(unittest.TestCase):
         self.assertEqual(filtered["collaboration"]["total_people"], 2)
         self.assertEqual(len(filtered["collaboration"]["heatmap"]), 5)
         self.assertTrue(all(row["weekday"] <= 5 for row in filtered["collaboration"]["heatmap"]))
-        self.assertEqual(len(filtered["collaboration"]["rankings"]), 5)
+        self.assertEqual(len(filtered["collaboration"]["rankings"]), 10)
         self.assertTrue(
             all(
                 item["total_count"] <= 2
@@ -146,7 +146,7 @@ class UiRenderSmokeTest(unittest.TestCase):
         self.assertIn("人员筛选", page)
         self.assertIn("协同洞察", page)
         self.assertIn("本周热力图", page)
-        self.assertIn("人最齐时段 Top 5", page)
+        self.assertIn("人最齐时段 Top 10", page)
         self.assertIn("自然语言查询", page)
 
     def test_static_export_omits_secrets(self) -> None:

@@ -451,28 +451,15 @@ button:hover,
 }
 
 .ranking-list {
-  overflow: hidden;
-}
-
-.ranking-marquee {
-  overflow: hidden;
+  display: grid;
+  gap: 10px;
   max-height: 420px;
-  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, transparent 100%);
-}
-
-.ranking-track {
-  display: grid;
-  gap: 10px;
-  animation: ranking-scroll 24s linear infinite;
-}
-
-.ranking-column {
-  display: grid;
-  gap: 10px;
-}
-
-.ranking-list:hover .ranking-track {
-  animation-play-state: paused;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(182, 84, 13, 0.38) transparent;
 }
 
 .ranking-card {
@@ -488,13 +475,19 @@ button:hover,
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.28s ease, background 0.28s ease, color 0.28s ease;
 }
 
-@keyframes ranking-scroll {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(calc(-50% - 5px));
-  }
+.ranking-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ranking-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ranking-list::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: rgba(182, 84, 13, 0.38);
+  background-clip: padding-box;
 }
 
 .ranking-index {
@@ -754,6 +747,15 @@ html[data-theme="night"] .heat-cell {
     linear-gradient(180deg, rgba(37, 33, 30, 0.98), rgba(28, 24, 22, 0.94)),
     linear-gradient(135deg, rgba(44, 138, 93, calc(0.2 + var(--heat) * 0.35)), rgba(217, 116, 42, 0.14));
   border-color: rgba(255, 219, 181, 0.08);
+}
+
+html[data-theme="night"] .ranking-list {
+  scrollbar-color: rgba(255, 182, 108, 0.42) transparent;
+}
+
+html[data-theme="night"] .ranking-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 182, 108, 0.42);
+  background-clip: padding-box;
 }
 
 html[data-theme="night"] .course-btn {
