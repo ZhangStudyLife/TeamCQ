@@ -87,7 +87,7 @@ class ImportFlowTest(unittest.TestCase):
         )
         lab_slot = next(slot for slot in lab_owner["slots"] if slot["course_name"] == "大学物理实验C")
         self.assertEqual(lab_slot["weeks_text"], "第2-17周")
-        self.assertEqual(lab_slot["course_time_text"], "13:30-16:15")
+        self.assertEqual(lab_slot["course_time_text"], "13:30-16:00")
         config = db.get_config()
         self.assertEqual(config["public_nl_remote_fallback"], "0")
         self.assertEqual(config["admin_trusted_ips"], "")
@@ -153,6 +153,7 @@ class UiRenderSmokeTest(unittest.TestCase):
         self.assertIn("semester_start_date", payload)
         self.assertIn("period_details", payload)
         self.assertIn("meetings", payload)
+        self.assertEqual(payload["period_details"][0]["time"], "08:05-08:50")
         self.assertNotIn("llm_api_key", serialized)
         self.assertNotIn("admin_password_hash", serialized)
 

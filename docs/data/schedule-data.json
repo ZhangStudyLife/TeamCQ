@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-11T23:34:26",
+  "generated_at": "2026-03-12T00:08:14",
   "semester_start_date": "2026-03-02",
-  "today": "2026-03-11",
+  "today": "2026-03-12",
   "current_week": 2,
-  "current_weekday": 3,
+  "current_weekday": 4,
   "current_import": {
     "id": 2,
     "dataset_hash": "fdd8adf66e2564621f3477bbb35e50f3dc9edcd329bca251eb599c69835ab8a7",
@@ -51,7 +51,7 @@
     {
       "period": 1,
       "label": "第1节",
-      "time": "08:00-08:45"
+      "time": "08:05-08:50"
     },
     {
       "period": 2,
@@ -66,12 +66,12 @@
     {
       "period": 4,
       "label": "第4节",
-      "time": "10:55-11:40"
+      "time": "10:50-11:35"
     },
     {
       "period": 5,
       "label": "第5节",
-      "time": "11:50-12:35"
+      "time": "11:40-12:25"
     },
     {
       "period": 6,
@@ -81,17 +81,17 @@
     {
       "period": 7,
       "label": "第7节",
-      "time": "14:25-15:10"
+      "time": "14:20-15:05"
     },
     {
       "period": 8,
       "label": "第8节",
-      "time": "15:30-16:15"
+      "time": "15:15-16:00"
     },
     {
       "period": 9,
       "label": "第9节",
-      "time": "16:25-17:10"
+      "time": "16:05-16:50"
     },
     {
       "period": 10,
@@ -101,12 +101,12 @@
     {
       "period": 11,
       "label": "第11节",
-      "time": "19:25-20:10"
+      "time": "19:20-20:05"
     },
     {
       "period": 12,
       "label": "第12节",
-      "time": "20:20-21:05"
+      "time": "20:10-20:55"
     }
   ],
   "meetings": [
@@ -140,7 +140,7 @@
       "location": "第7教研楼南513",
       "teacher": "郑玮",
       "course_code": "A1106030-61",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -174,7 +174,7 @@
       "location": "第6教研楼北304",
       "teacher": "王蓉",
       "course_code": "C1592014-01",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -207,7 +207,7 @@
       "location": "大学物理实验中心",
       "teacher": "陈翔翔",
       "course_code": "S0718160-13",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -233,7 +233,7 @@
       "location": "第6教研楼北306",
       "teacher": "鲁贵宝",
       "course_code": "C2301290-04",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -267,7 +267,7 @@
       "location": "第6教研楼中327",
       "teacher": "邓琴",
       "course_code": "A0714202-13",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -299,7 +299,7 @@
       "location": "第6教研楼北104",
       "teacher": "周玉乔",
       "course_code": "A2301260-13",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -318,7 +318,7 @@
       "location": "课外实践不在教室",
       "teacher": "周玉乔",
       "course_code": "A2301260-13",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -352,7 +352,7 @@
       "location": "第7教研楼南205",
       "teacher": "杨柳",
       "course_code": "A0402900-08",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -386,7 +386,7 @@
       "location": "第7教研楼北506",
       "teacher": "梁燕",
       "course_code": "A0400691-07",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -411,7 +411,7 @@
       "location": "第3教研楼324",
       "teacher": "钟京霞",
       "course_code": "A1106040-69",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -445,7 +445,7 @@
       "location": "第6教研楼中327",
       "teacher": "邓琴",
       "course_code": "A0714202-13",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -466,7 +466,7 @@
       "location": "第3教研楼105",
       "teacher": "许奕韬,章宗森",
       "course_code": "A6500042-06",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -494,7 +494,7 @@
       "location": "第2教研楼北212A（数字电路实验室）",
       "teacher": "牛小燕",
       "course_code": "S0403470-25",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -528,7 +528,7 @@
       "location": "第6教研楼北112",
       "teacher": "李瑞雪",
       "course_code": "A0715681-23",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -562,7 +562,7 @@
       "location": "西北田径场",
       "teacher": "王兵",
       "course_code": "T1300026-06",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -585,7 +585,7 @@
       "location": "第12教研楼202",
       "teacher": "赵金瑞",
       "course_code": "A2301270-18",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -604,7 +604,7 @@
       "location": "课外实践不在教室",
       "teacher": "赵金瑞",
       "course_code": "A2301270-18",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -632,7 +632,7 @@
       "location": "第2教研楼中213B（电路分析.信号系统实验室）",
       "teacher": "吕伟锋",
       "course_code": "S0404521-24",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -666,7 +666,7 @@
       "location": "第7教研楼中3022",
       "teacher": "吴悦,YANG XIAOYAN",
       "course_code": "A0410560-08",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -689,7 +689,7 @@
       "location": "第7教研楼北406",
       "teacher": "郁世平",
       "course_code": "A2301262-19",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -708,7 +708,7 @@
       "location": "课外实践不在教室",
       "teacher": "郁世平",
       "course_code": "A2301262-19",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -742,7 +742,7 @@
       "location": "第6教研楼北102",
       "teacher": "毕金钵",
       "course_code": "A0714202-26",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -776,7 +776,7 @@
       "location": "第6教研楼北304",
       "teacher": "王蓉",
       "course_code": "C1592014-01",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -809,7 +809,7 @@
       "location": "大学物理实验中心",
       "teacher": "李雅男",
       "course_code": "S0718160-24",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -843,7 +843,7 @@
       "location": "第6教研楼北102",
       "teacher": "周后盘",
       "course_code": "A0610270-02",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -866,7 +866,7 @@
       "location": "第12教研楼212",
       "teacher": "刘若玢",
       "course_code": "A2301270-01",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -885,7 +885,7 @@
       "location": "课外实践不在教室",
       "teacher": "刘若玢",
       "course_code": "A2301270-01",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -919,7 +919,7 @@
       "location": "第7教研楼北218A",
       "teacher": "尹克",
       "course_code": "C0602580-02",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -953,7 +953,7 @@
       "location": "第6教研楼北218",
       "teacher": "吴跃丽",
       "course_code": "A0715681-17",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -987,7 +987,7 @@
       "location": "第6教研楼北102",
       "teacher": "毕金钵",
       "course_code": "A0714202-26",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1008,7 +1008,7 @@
       "location": "第3教研楼205",
       "teacher": "叶玥都,姜博恩",
       "course_code": "A6500042-45",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1042,7 +1042,7 @@
       "location": "第12教研楼103",
       "teacher": "孔佳鸣",
       "course_code": "A1106012-05",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -1074,7 +1074,7 @@
       "location": "第6教研楼北118",
       "teacher": "王亚楠",
       "course_code": "A2301260-21",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1093,7 +1093,7 @@
       "location": "课外实践不在教室",
       "teacher": "王亚楠",
       "course_code": "A2301260-21",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1127,7 +1127,7 @@
       "location": "第12教研楼412",
       "teacher": "郑建功",
       "course_code": "C1291003-03",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1161,7 +1161,7 @@
       "location": "西边匹克球场",
       "teacher": "张佳佳",
       "course_code": "T1300063-04",
-      "course_time_text": "15:30-17:10",
+      "course_time_text": "15:15-16:50",
       "warning": "",
       "confidence": 1.0
     },
@@ -1184,7 +1184,7 @@
       "location": "第3教研楼101",
       "teacher": "郁世平",
       "course_code": "A2301262-22",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1203,7 +1203,7 @@
       "location": "课外实践不在教室",
       "teacher": "郁世平",
       "course_code": "A2301262-22",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1228,7 +1228,7 @@
       "location": "第6教研楼北106",
       "teacher": "汪婷,孙芳芳",
       "course_code": "A0604480-09",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -1262,7 +1262,7 @@
       "location": "第6教研楼北122",
       "teacher": "方晓伦,黄娜",
       "course_code": "A0604420-09",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1296,7 +1296,7 @@
       "location": "第7教研楼南407",
       "teacher": "周晓琴",
       "course_code": "A1103750-01",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -1330,7 +1330,7 @@
       "location": "第7教研楼南217",
       "teacher": "魏凯华",
       "course_code": "A1901210-01",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1364,7 +1364,7 @@
       "location": "第7教研楼北416A",
       "teacher": "郭艳",
       "course_code": "C1903360-01",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1398,7 +1398,7 @@
       "location": "第7教研楼南109",
       "teacher": "董汉菁",
       "course_code": "B1900540-01",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1423,7 +1423,7 @@
       "location": "第7教研楼南405",
       "teacher": "林宏泽",
       "course_code": "S1900570-01",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1457,7 +1457,7 @@
       "location": "第7教研楼北416A",
       "teacher": "章国稳",
       "course_code": "C060132",
-      "course_time_text": "15:30-17:10",
+      "course_time_text": "15:15-16:50",
       "warning": "",
       "confidence": 1.0
     },
@@ -1491,7 +1491,7 @@
       "location": "第4教研楼419-421",
       "teacher": "刘亦安",
       "course_code": "A0610230-01",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1512,7 +1512,7 @@
       "location": "第3教研楼301",
       "teacher": "王丹丹",
       "course_code": "A6500044-45",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1546,7 +1546,7 @@
       "location": "西边足球场",
       "teacher": "董加贝",
       "course_code": "T1300018-01",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -1578,7 +1578,7 @@
       "location": "第6教研楼北116",
       "teacher": "杨洁",
       "course_code": "A2301120-18",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1597,7 +1597,7 @@
       "location": "课外实践不在教室",
       "teacher": "杨洁",
       "course_code": "A2301120-18",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1625,7 +1625,7 @@
       "location": "第8教研楼306（线路实习实验室）",
       "teacher": "赵晓梅",
       "course_code": "S0400620-26",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -1659,7 +1659,7 @@
       "location": "第7教研楼北122A",
       "teacher": "梁立军,樊凯",
       "course_code": "B0610250-01",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1693,7 +1693,7 @@
       "location": "第7教研楼南207",
       "teacher": "杨玲波,张垚",
       "course_code": "A1900700-01",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -1727,7 +1727,7 @@
       "location": "第6教研楼北508",
       "teacher": "辛青",
       "course_code": "A0402080-07",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -1761,7 +1761,7 @@
       "location": "第6教研楼北114",
       "teacher": "金朝阳",
       "course_code": "A0601660-01",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -1795,7 +1795,7 @@
       "location": "第6教研楼北112",
       "teacher": "左燕,彭冬亮",
       "course_code": "A0601920-01",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -1829,7 +1829,7 @@
       "location": "第7教研楼中3012",
       "teacher": "柏建军",
       "course_code": "A0601970-01",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -1861,7 +1861,7 @@
       "location": "第6教研楼北414",
       "teacher": "魏凯华",
       "course_code": "A0600672-01",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -1886,7 +1886,7 @@
       "location": "第4教研楼315-317",
       "teacher": "余善恩,徐晓滨",
       "course_code": "S0600860-01",
-      "course_time_text": "08:00-11:40",
+      "course_time_text": "08:05-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -1912,7 +1912,7 @@
       "location": "第10教研教楼404",
       "teacher": "尹克",
       "course_code": "S0610080-01",
-      "course_time_text": "08:00-11:40",
+      "course_time_text": "08:05-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -1946,7 +1946,7 @@
       "location": "第7教研楼中3021",
       "teacher": "吕帅帅",
       "course_code": "A0402080-06",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -1980,7 +1980,7 @@
       "location": "第6教研楼北114",
       "teacher": "金朝阳",
       "course_code": "A0601660-01",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -2014,7 +2014,7 @@
       "location": "第4教研楼315-317",
       "teacher": "赵伟杰",
       "course_code": "S0610320-01",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -2035,7 +2035,7 @@
       "location": "第6教研楼北110",
       "teacher": "褚倩",
       "course_code": "A6500044-40",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2067,7 +2067,7 @@
       "location": "第6教研楼北108",
       "teacher": "赵杰艺",
       "course_code": "A2301120-22",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -2086,7 +2086,7 @@
       "location": "课外实践不在教室",
       "teacher": "赵杰艺",
       "course_code": "A2301120-22",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -2114,7 +2114,7 @@
       "location": "第8教研楼302（线路实习实验室）",
       "teacher": "赵晓梅",
       "course_code": "S0400620-15",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -2132,7 +2132,7 @@
       "location": "第7教研楼南217",
       "teacher": "张奇峰,胡婷婷",
       "course_code": "A1102080-02",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -2165,7 +2165,7 @@
       "location": "第3教研楼南楼121西",
       "teacher": "胡婷婷,张奇峰",
       "course_code": "A1102080-02",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -2199,7 +2199,7 @@
       "location": "第6教研楼北118",
       "teacher": "彭冬亮,左燕",
       "course_code": "A0601920-01",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -2233,7 +2233,7 @@
       "location": "西边热身馆",
       "teacher": "毛志强",
       "course_code": "T1300020-12",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2267,7 +2267,7 @@
       "location": "第6教研楼北102",
       "teacher": "毕金钵",
       "course_code": "A0714202-26",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -2292,7 +2292,7 @@
       "location": "第6教研楼北308",
       "teacher": "侯佳",
       "course_code": "C2301270-03",
-      "course_time_text": "15:30-17:10",
+      "course_time_text": "15:15-16:50",
       "warning": "",
       "confidence": 1.0
     },
@@ -2326,7 +2326,7 @@
       "location": "第12教研楼405",
       "teacher": "王晓雄",
       "course_code": "C1292037-02",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2360,7 +2360,7 @@
       "location": "穹顶篮排球场",
       "teacher": "徐文祥",
       "course_code": "T1300015-04",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -2392,7 +2392,7 @@
       "location": "第6教研楼北308",
       "teacher": "朱萌",
       "course_code": "A2301260-19",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -2411,7 +2411,7 @@
       "location": "课外实践不在教室",
       "teacher": "朱萌",
       "course_code": "A2301260-19",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -2445,7 +2445,7 @@
       "location": "第6教研楼北302",
       "teacher": "余依城",
       "course_code": "C5692018-01",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2479,7 +2479,7 @@
       "location": "第6教研楼北312",
       "teacher": "许欢",
       "course_code": "A0610410-04",
-      "course_time_text": "15:30-17:10",
+      "course_time_text": "15:15-16:50",
       "warning": "",
       "confidence": 1.0
     },
@@ -2513,7 +2513,7 @@
       "location": "第6教研楼北102",
       "teacher": "毕金钵",
       "course_code": "A0714202-26",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -2534,7 +2534,7 @@
       "location": "第3教研楼315",
       "teacher": "张艺珂,叶玥都",
       "course_code": "A6500042-44",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2568,7 +2568,7 @@
       "location": "第7教研楼南115",
       "teacher": "沈春利",
       "course_code": "A1106030-83",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -2602,7 +2602,7 @@
       "location": "第6教研楼北104",
       "teacher": "石厅",
       "course_code": "A0604420-07",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -2628,7 +2628,7 @@
       "location": "第6教研楼北122",
       "teacher": "申屠晗",
       "course_code": "A0604480-07",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2651,7 +2651,7 @@
       "location": "第7教研楼中2022",
       "teacher": "郁世平",
       "course_code": "A2301262-23",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2670,7 +2670,7 @@
       "location": "课外实践不在教室",
       "teacher": "郁世平",
       "course_code": "A2301262-23",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2695,7 +2695,7 @@
       "location": "第3教研楼222",
       "teacher": "何艳",
       "course_code": "A1106040-83",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -2729,7 +2729,7 @@
       "location": "第12教研楼108",
       "teacher": "赵梦丹",
       "course_code": "A0715011-03",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -2762,7 +2762,7 @@
       "location": "大学物理实验中心",
       "teacher": "李和平",
       "course_code": "S0718051-06",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -2796,7 +2796,7 @@
       "location": "第6教研楼北408",
       "teacher": "谢强军",
       "course_code": "A0714202-25",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -2829,7 +2829,7 @@
       "location": "大学物理实验中心",
       "teacher": "蔡本晓",
       "course_code": "S0718160-22",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -2852,7 +2852,7 @@
       "location": "第12教研楼114",
       "teacher": "吴周礼",
       "course_code": "A2301270-22",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -2871,7 +2871,7 @@
       "location": "课外实践不在教室",
       "teacher": "吴周礼",
       "course_code": "A2301270-22",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -2905,7 +2905,7 @@
       "location": "第6教研楼中427",
       "teacher": "邓凌云",
       "course_code": "A0715681-16",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -2930,7 +2930,7 @@
       "location": "第6教研楼北408",
       "teacher": "刘红英",
       "course_code": "A0604480-08",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -2964,7 +2964,7 @@
       "location": "第3教研楼111",
       "teacher": "高星华",
       "course_code": "C1292006-01",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -2998,7 +2998,7 @@
       "location": "西边篮球场",
       "teacher": "王兵",
       "course_code": "T1300001-05",
-      "course_time_text": "15:30-17:10",
+      "course_time_text": "15:15-16:50",
       "warning": "",
       "confidence": 1.0
     },
@@ -3032,7 +3032,7 @@
       "location": "第3教研楼105",
       "teacher": "王晟迪",
       "course_code": "C3400590-04",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -3066,7 +3066,7 @@
       "location": "第12教研楼110",
       "teacher": "谢强军",
       "course_code": "A0714202-25",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -3100,7 +3100,7 @@
       "location": "第6教研楼北318",
       "teacher": "杨玲波",
       "course_code": "A0610270-01",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -3121,7 +3121,7 @@
       "location": "第3教研楼205",
       "teacher": "叶玥都,姜博恩",
       "course_code": "A6500042-45",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -3144,7 +3144,7 @@
       "location": "第7教研楼中2022",
       "teacher": "郁世平",
       "course_code": "A2301262-21",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -3163,7 +3163,7 @@
       "location": "课外实践不在教室",
       "teacher": "郁世平",
       "course_code": "A2301262-21",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -3197,7 +3197,7 @@
       "location": "第7教研楼南217",
       "teacher": "张丽萍",
       "course_code": "A1106030-89",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -3229,7 +3229,7 @@
       "location": "第12教研楼210",
       "teacher": "朱萌",
       "course_code": "A2301260-20",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -3248,7 +3248,7 @@
       "location": "课外实践不在教室",
       "teacher": "朱萌",
       "course_code": "A2301260-20",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -3273,7 +3273,7 @@
       "location": "第3教研楼314",
       "teacher": "马玉军",
       "course_code": "A1106040-89",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -3307,7 +3307,7 @@
       "location": "第6教研楼北122",
       "teacher": "常伟光,方晓伦,黄娜",
       "course_code": "A0604420-08",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -3341,7 +3341,7 @@
       "location": "游泳馆",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -3375,7 +3375,7 @@
       "location": "第6教研楼北112",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -3409,7 +3409,7 @@
       "location": "第6教研楼北122",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -3437,7 +3437,7 @@
       "location": "第8教研楼308（线路实习实验室）",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -3471,7 +3471,7 @@
       "location": "第6教研楼北214",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -3505,7 +3505,7 @@
       "location": "第6教研楼北120",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -3539,7 +3539,7 @@
       "location": "第6教研楼北204",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -3560,7 +3560,7 @@
       "location": "第3教研楼301",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -3594,7 +3594,7 @@
       "location": "第7教研楼北504",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -3626,7 +3626,7 @@
       "location": "第6教研楼北108",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -3645,7 +3645,7 @@
       "location": "课外实践不在教室",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -3679,7 +3679,7 @@
       "location": "第6教研楼北220",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -3713,7 +3713,7 @@
       "location": "第6教研楼北118",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -3747,7 +3747,7 @@
       "location": "第6教研楼北220",
       "teacher": "",
       "course_code": "",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -3781,7 +3781,7 @@
       "location": "第6教研楼北102",
       "teacher": "毕金钵",
       "course_code": "A0714202-26",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -3815,7 +3815,7 @@
       "location": "第6教研楼北304",
       "teacher": "王蓉",
       "course_code": "C1592014-01",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -3848,7 +3848,7 @@
       "location": "大学物理实验中心",
       "teacher": "李雅男",
       "course_code": "S0718160-24",
-      "course_time_text": "13:30-16:15",
+      "course_time_text": "13:30-16:00",
       "warning": "",
       "confidence": 1.0
     },
@@ -3871,7 +3871,7 @@
       "location": "第12教研楼114",
       "teacher": "吴周礼",
       "course_code": "A2301270-22",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -3890,7 +3890,7 @@
       "location": "课外实践不在教室",
       "teacher": "吴周礼",
       "course_code": "A2301270-22",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -3924,7 +3924,7 @@
       "location": "第6教研楼北102",
       "teacher": "周后盘",
       "course_code": "A0610270-02",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -3958,7 +3958,7 @@
       "location": "第7教研楼北218A",
       "teacher": "尹克",
       "course_code": "C0602580-02",
-      "course_time_text": "18:30-21:05",
+      "course_time_text": "18:30-20:55",
       "warning": "",
       "confidence": 1.0
     },
@@ -3992,7 +3992,7 @@
       "location": "第6教研楼北218",
       "teacher": "吴跃丽",
       "course_code": "A0715681-17",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -4026,7 +4026,7 @@
       "location": "第6教研楼北102",
       "teacher": "毕金钵",
       "course_code": "A0714202-26",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -4047,7 +4047,7 @@
       "location": "第3教研楼205",
       "teacher": "姜博恩,叶玥都",
       "course_code": "A6500042-45",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -4081,7 +4081,7 @@
       "location": "第6教研楼中325",
       "teacher": "刘娟娟",
       "course_code": "C2092009-01",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -4115,7 +4115,7 @@
       "location": "第12教研楼107",
       "teacher": "杜兴杰",
       "course_code": "A1106050-11",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -4147,7 +4147,7 @@
       "location": "第6教研楼北118",
       "teacher": "王亚楠",
       "course_code": "A2301260-21",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -4166,7 +4166,7 @@
       "location": "课外实践不在教室",
       "teacher": "王亚楠",
       "course_code": "A2301260-21",
-      "course_time_text": "10:00-12:35",
+      "course_time_text": "10:00-12:25",
       "warning": "",
       "confidence": 1.0
     },
@@ -4200,7 +4200,7 @@
       "location": "西边篮球场",
       "teacher": "王兵",
       "course_code": "T1300001-22",
-      "course_time_text": "15:30-17:10",
+      "course_time_text": "15:15-16:50",
       "warning": "",
       "confidence": 1.0
     },
@@ -4223,7 +4223,7 @@
       "location": "第3教研楼101",
       "teacher": "郁世平",
       "course_code": "A2301262-22",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -4242,7 +4242,7 @@
       "location": "课外实践不在教室",
       "teacher": "郁世平",
       "course_code": "A2301262-22",
-      "course_time_text": "18:30-20:10",
+      "course_time_text": "18:30-20:05",
       "warning": "",
       "confidence": 1.0
     },
@@ -4267,7 +4267,7 @@
       "location": "第3教研楼322",
       "teacher": "陈蒙",
       "course_code": "A1106060-11",
-      "course_time_text": "08:00-09:40",
+      "course_time_text": "08:05-09:40",
       "warning": "",
       "confidence": 1.0
     },
@@ -4292,7 +4292,7 @@
       "location": "第6教研楼北106",
       "teacher": "汪婷,孙芳芳",
       "course_code": "A0604480-09",
-      "course_time_text": "10:00-11:40",
+      "course_time_text": "10:00-11:35",
       "warning": "",
       "confidence": 1.0
     },
@@ -4326,7 +4326,7 @@
       "location": "第6教研楼北122",
       "teacher": "方晓伦,黄娜",
       "course_code": "A0604420-09",
-      "course_time_text": "13:30-15:10",
+      "course_time_text": "13:30-15:05",
       "warning": "",
       "confidence": 1.0
     }
