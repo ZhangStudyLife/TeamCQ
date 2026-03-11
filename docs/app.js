@@ -30,6 +30,7 @@ const state = {
   weekday: 1,
   scope: "all_day",
   date: "",
+  lastKnownToday: "",
 };
 
 const refs = {};
@@ -37,11 +38,15 @@ const refs = {};
 document.addEventListener("DOMContentLoaded", async () => {
   bindRefs();
   bindBaseEvents();
+  startLiveUi();
   await loadDataset();
 });
 
 function bindRefs() {
   refs.heroSummary = document.getElementById("hero-summary");
+  refs.liveClock = document.getElementById("live-clock");
+  refs.liveDate = document.getElementById("live-date");
+  refs.themeStatus = document.getElementById("theme-status");
   refs.datasetMeta = document.getElementById("dataset-meta");
   refs.queryDate = document.getElementById("query-date");
   refs.queryWeek = document.getElementById("query-week");
@@ -150,6 +155,51 @@ function bindBaseEvents() {
   });
 }
 
+function startLiveUi() {
+  updateLiveUi();
+  window.setInterval(updateLiveUi, 1000);
+}
+
+function updateLiveUi() {
+  const now = new Date();
+  const today = getBrowserToday();
+  const todayIso = toIsoDate(today);
+  if (refs.liveClock) {
+    refs.liveClock.textContent = formatClock(now);
+  }
+  if (refs.liveDate) {
+    refs.liveDate.textContent = `${todayIso} · ${WEEKDAY_LABELS[today.getDay() === 0 ? 7 : today.getDay()]}`;
+  }
+  applyTheme(now);
+  const previousToday = state.lastKnownToday;
+  state.lastKnownToday = todayIso;
+  if (state.dataset && previousToday && previousToday !== todayIso && state.date === previousToday) {
+    state.week = clampWeek(dateToWeek(today), 1);
+    state.weekday = today.getDay() === 0 ? 7 : today.getDay();
+    state.date = todayIso;
+    syncQueryInputs();
+    render();
+  }
+}
+
+function applyTheme(now) {
+  const theme = resolveThemeMode(now);
+  document.documentElement.dataset.theme = theme;
+  if (refs.themeStatus) {
+    refs.themeStatus.dataset.theme = theme;
+    refs.themeStatus.textContent = theme === "night" ? "夜间模式" : "日间模式";
+  }
+}
+
+function resolveThemeMode(now) {
+  const hour = now.getHours();
+  return hour >= 7 && hour < 19 ? "day" : "night";
+}
+
+function formatClock(now) {
+  return `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`;
+}
+
 async function loadDataset() {
   try {
     const response = await fetch("./data/schedule-data.json", { cache: "no-store" });
@@ -158,6 +208,7 @@ async function loadDataset() {
     }
     state.dataset = await response.json();
     const today = getBrowserToday();
+    state.lastKnownToday = toIsoDate(today);
     state.week = clampWeek(dateToWeek(today), 1);
     state.weekday = today.getDay() === 0 ? 7 : today.getDay();
     state.scope = "all_day";

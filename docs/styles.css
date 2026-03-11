@@ -10,6 +10,22 @@
   --font: "HarmonyOS Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
+html {
+  color-scheme: light;
+}
+
+html[data-theme="night"] {
+  color-scheme: dark;
+  --bg: #12100e;
+  --panel: rgba(26, 23, 20, 0.9);
+  --panel-border: rgba(255, 205, 150, 0.12);
+  --text: #f6eadb;
+  --muted: #c8b39a;
+  --accent: #ff9f5b;
+  --accent-strong: #d86b1d;
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -23,6 +39,14 @@ body {
     radial-gradient(circle at top left, rgba(255, 214, 153, 0.55), transparent 38%),
     radial-gradient(circle at top right, rgba(233, 170, 120, 0.28), transparent 30%),
     linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+  transition: background 0.28s ease, color 0.28s ease;
+}
+
+html[data-theme="night"] body {
+  background:
+    radial-gradient(circle at top left, rgba(217, 116, 42, 0.18), transparent 35%),
+    radial-gradient(circle at top right, rgba(255, 172, 95, 0.12), transparent 28%),
+    linear-gradient(180deg, #171412 0%, var(--bg) 100%);
 }
 
 .page-bg {
@@ -34,6 +58,12 @@ body {
     linear-gradient(90deg, rgba(110, 72, 29, 0.04) 1px, transparent 1px);
   background-size: 32px 32px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 70%);
+}
+
+html[data-theme="night"] .page-bg {
+  background-image:
+    linear-gradient(rgba(255, 226, 196, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 226, 196, 0.035) 1px, transparent 1px);
 }
 
 .page-shell {
@@ -51,6 +81,7 @@ body {
   padding: 22px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
+  transition: background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .hero {
@@ -58,6 +89,69 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
+}
+
+.hero-copy-block {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-live {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.clock-chip,
+.theme-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(87, 59, 20, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 24px rgba(87, 59, 20, 0.08);
+}
+
+.clock-chip {
+  flex-wrap: wrap;
+}
+
+.clock-caption,
+.clock-chip small {
+  color: var(--muted);
+}
+
+.clock-caption {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.clock-chip strong {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.clock-chip small {
+  width: 100%;
+  font-size: 13px;
+}
+
+.theme-chip {
+  font-weight: 700;
+}
+
+.theme-chip[data-theme="day"] {
+  background: linear-gradient(135deg, rgba(255, 237, 190, 0.92), rgba(255, 214, 133, 0.82));
+  color: #7a460d;
+}
+
+.theme-chip[data-theme="night"] {
+  background: linear-gradient(135deg, rgba(55, 49, 77, 0.92), rgba(30, 28, 44, 0.88));
+  color: #f4e6ff;
 }
 
 .eyebrow {
@@ -154,6 +248,7 @@ textarea {
   background: rgba(255, 255, 255, 0.78);
   padding: 12px 14px;
   color: var(--text);
+  transition: background 0.28s ease, border-color 0.28s ease, color 0.28s ease;
 }
 
 textarea {
@@ -219,6 +314,7 @@ button:hover,
   background: rgba(255, 255, 255, 0.74);
   color: var(--muted);
   cursor: pointer;
+  transition: background 0.28s ease, border-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .weekday-pill input:checked + span,
@@ -244,6 +340,7 @@ button:hover,
   border-radius: 999px;
   padding: 8px 12px;
   background: rgba(31, 26, 23, 0.06);
+  transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease;
 }
 
 .insight-grid {
@@ -289,6 +386,7 @@ button:hover,
     linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.74)),
     linear-gradient(135deg, rgba(44, 138, 93, calc(0.16 + var(--heat) * 0.42)), rgba(217, 116, 42, 0.12));
   border: 1px solid rgba(87, 59, 20, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.28s ease, background 0.28s ease, color 0.28s ease;
 }
 
 .heat-cell strong {
@@ -315,6 +413,7 @@ button:hover,
   border: 1px solid rgba(87, 59, 20, 0.1);
   color: inherit;
   text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.28s ease, background 0.28s ease, color 0.28s ease;
 }
 
 .ranking-index {
@@ -343,6 +442,7 @@ button:hover,
   z-index: 1;
   background: rgba(251, 247, 240, 0.98);
   backdrop-filter: blur(8px);
+  transition: background 0.28s ease, color 0.28s ease;
 }
 
 .matrix-period {
@@ -384,6 +484,7 @@ button:hover,
   text-align: left;
   cursor: pointer;
   box-shadow: 0 8px 18px rgba(120, 66, 20, 0.10);
+  transition: background 0.28s ease, border-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .course-btn strong {
@@ -431,6 +532,7 @@ button:hover,
   padding: 14px;
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(87, 59, 20, 0.08);
+  transition: background 0.28s ease, border-color 0.28s ease, color 0.28s ease;
 }
 
 .status-card.free {
@@ -446,6 +548,7 @@ button:hover,
   border-radius: 18px;
   color: var(--muted);
   background: rgba(31, 26, 23, 0.04);
+  transition: background 0.28s ease, color 0.28s ease;
 }
 
 .detail-modal {
@@ -470,6 +573,7 @@ button:hover,
   border-radius: 24px;
   background: #fffaf4;
   box-shadow: 0 28px 80px rgba(31, 26, 23, 0.24);
+  transition: background 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .detail-grid {
@@ -482,6 +586,7 @@ button:hover,
   padding: 14px;
   border-radius: 18px;
   background: rgba(31, 26, 23, 0.04);
+  transition: background 0.28s ease, color 0.28s ease;
 }
 
 .footer-copy {
@@ -492,6 +597,80 @@ button:hover,
 details summary {
   cursor: pointer;
   font-weight: 700;
+}
+
+html[data-theme="night"] .clock-chip,
+html[data-theme="night"] .ghost,
+html[data-theme="night"] .weekday-pill span,
+html[data-theme="night"] .person-chip span,
+html[data-theme="night"] .summary-pill,
+html[data-theme="night"] .tag,
+html[data-theme="night"] .ranking-card,
+html[data-theme="night"] .status-card,
+html[data-theme="night"] .detail-block,
+html[data-theme="night"] .empty-state {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 219, 181, 0.1);
+}
+
+html[data-theme="night"] input,
+html[data-theme="night"] select,
+html[data-theme="night"] textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 219, 181, 0.12);
+}
+
+html[data-theme="night"] .matrix-table thead th {
+  background: rgba(26, 23, 20, 0.98);
+}
+
+html[data-theme="night"] .slot-free {
+  background: linear-gradient(180deg, rgba(44, 138, 93, 0.18), rgba(44, 138, 93, 0.1));
+  box-shadow: inset 0 0 0 1px rgba(111, 214, 162, 0.08);
+}
+
+html[data-theme="night"] .slot-busy {
+  background: linear-gradient(180deg, rgba(156, 79, 20, 0.38), rgba(96, 51, 18, 0.22));
+  box-shadow: inset 0 0 0 1px rgba(255, 191, 134, 0.1);
+}
+
+html[data-theme="night"] .heat-cell {
+  background:
+    linear-gradient(180deg, rgba(37, 33, 30, 0.98), rgba(28, 24, 22, 0.94)),
+    linear-gradient(135deg, rgba(44, 138, 93, calc(0.2 + var(--heat) * 0.35)), rgba(217, 116, 42, 0.14));
+  border-color: rgba(255, 219, 181, 0.08);
+}
+
+html[data-theme="night"] .course-btn {
+  background: linear-gradient(180deg, rgba(50, 41, 33, 0.95), rgba(40, 33, 27, 0.96));
+  border-color: rgba(255, 219, 181, 0.14);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="night"] .slot-busy .course-btn {
+  background: linear-gradient(180deg, rgba(89, 58, 31, 0.96), rgba(69, 45, 24, 0.98));
+  border-color: rgba(255, 193, 129, 0.24);
+}
+
+html[data-theme="night"] .slot-busy .course-btn strong {
+  color: #ffd6af;
+}
+
+html[data-theme="night"] .slot-busy .course-btn span,
+html[data-theme="night"] .slot-busy .course-btn small,
+html[data-theme="night"] .slot-card small,
+html[data-theme="night"] .slot-card span,
+html[data-theme="night"] .period-meta small {
+  color: #ddc2a7;
+}
+
+html[data-theme="night"] .slot-free strong {
+  color: #a7e2c2;
+}
+
+html[data-theme="night"] .detail-card {
+  background: #1d1a17;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
 }
 
 @media (max-width: 1080px) {
