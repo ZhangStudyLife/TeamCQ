@@ -361,11 +361,13 @@ button:hover,
 }
 
 .slot-free {
-  background: rgba(44, 138, 93, 0.09);
+  background: linear-gradient(180deg, rgba(44, 138, 93, 0.14), rgba(44, 138, 93, 0.08));
+  box-shadow: inset 0 0 0 1px rgba(44, 138, 93, 0.08);
 }
 
 .slot-busy {
-  background: rgba(217, 116, 42, 0.06);
+  background: linear-gradient(180deg, rgba(217, 116, 42, 0.22), rgba(182, 84, 13, 0.14));
+  box-shadow: inset 0 0 0 1px rgba(182, 84, 13, 0.12);
 }
 
 .slot-card {
@@ -376,16 +378,39 @@ button:hover,
 .course-btn {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid rgba(87, 59, 20, 0.12);
+  border: 1px solid rgba(87, 59, 20, 0.14);
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(252, 244, 236, 0.92));
+  background: linear-gradient(180deg, rgba(255, 248, 240, 0.92), rgba(251, 233, 214, 0.96));
   text-align: left;
   cursor: pointer;
+  box-shadow: 0 8px 18px rgba(120, 66, 20, 0.10);
 }
 
 .course-btn strong {
   display: block;
   margin-bottom: 4px;
+}
+
+.slot-busy .course-btn {
+  border-color: rgba(158, 72, 12, 0.26);
+  background:
+    linear-gradient(180deg, rgba(255, 244, 230, 0.98), rgba(247, 210, 171, 0.94));
+}
+
+.slot-busy .course-btn strong {
+  color: #7f3404;
+}
+
+.slot-busy .course-btn span {
+  color: #8e572e;
+}
+
+.slot-free strong {
+  color: #1f6d47;
+}
+
+.matrix-table tbody td {
+  min-width: 140px;
 }
 
 .nl-form {
