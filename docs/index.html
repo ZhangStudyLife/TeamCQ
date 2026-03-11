@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课表空闲查询</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div class="page-bg"></div>
+    <main class="page-shell">
+      <header class="hero panel">
+        <div>
+          <span class="eyebrow">GitHub Pages 静态版</span>
+          <h1>课表空闲查询</h1>
+          <p id="hero-summary" class="hero-copy">正在加载课表数据…</p>
+        </div>
+        <div class="hero-actions">
+          <button type="button" class="ghost" id="jump-today">今天</button>
+          <button type="button" class="ghost" id="jump-tomorrow">明天</button>
+          <button type="button" class="ghost" id="jump-current-week">本周</button>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>结构化查询</h2>
+          <span class="section-hint" id="dataset-meta">只读静态数据</span>
+        </div>
+        <form id="structured-form" class="query-form">
+          <div class="query-grid">
+            <label>
+              指定日期
+              <input id="query-date" type="date">
+            </label>
+            <label>
+              周次
+              <input id="query-week" type="number" min="1">
+            </label>
+            <label>
+              范围
+              <select id="query-scope">
+                <option value="all_day">全天</option>
+                <option value="morning">上午</option>
+                <option value="afternoon">下午</option>
+                <option value="evening">晚上</option>
+              </select>
+            </label>
+          </div>
+          <div class="weekday-pills" id="weekday-pills"></div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>人员筛选</h2>
+          <span class="section-hint" id="people-count">0/0 人</span>
+        </div>
+        <div class="toolbar-row">
+          <button type="button" class="ghost" id="people-select-all">全选</button>
+          <button type="button" class="ghost" id="people-clear">清空</button>
+          <button type="button" class="ghost" id="people-only-free">仅看整段空闲</button>
+        </div>
+        <div class="chip-grid" id="people-filters"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>协同洞察</h2>
+          <span class="section-hint">优先显示本周人最齐的时段</span>
+        </div>
+        <div class="insight-grid">
+          <section>
+            <h3>本周热力图</h3>
+            <div id="heatmap-root" class="heatmap-wrap"></div>
+          </section>
+          <section>
+            <h3>人最齐时段 Top 5</h3>
+            <div id="rankings-root" class="ranking-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>空闲矩阵</h2>
+          <span class="section-hint" id="matrix-meta"></span>
+        </div>
+        <div id="summary-strip" class="summary-strip"></div>
+        <div class="matrix-wrap">
+          <table class="matrix-table">
+            <thead id="matrix-head"></thead>
+            <tbody id="matrix-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <details class="panel">
+        <summary>自然语言查询</summary>
+        <form id="nl-form" class="nl-form">
+          <textarea id="nl-question" rows="3" placeholder="例如：4月2日下午谁有空"></textarea>
+          <div class="toolbar-row">
+            <button type="submit">解析并查询</button>
+          </div>
+        </form>
+        <div id="nl-result"></div>
+      </details>
+
+      <footer class="footer-copy">
+        公开页只上传结构化课表数据，不上传 API Key、不上传后台状态、不上传原始 PDF。
+      </footer>
+    </main>
+
+    <div id="detail-modal" class="detail-modal" aria-hidden="true">
+      <div class="detail-card">
+        <div class="panel-head">
+          <h2 id="detail-title">课程详情</h2>
+          <button type="button" class="ghost" id="detail-close">关闭</button>
+        </div>
+        <div id="detail-content" class="detail-grid"></div>
+      </div>
+    </div>
+  </body>
+</html>

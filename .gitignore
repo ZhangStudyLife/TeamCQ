@@ -1,0 +1,11 @@
+.schedule_state/
+.schedule_state_*/
+.test_state/
+.test_tmp/
+__pycache__/
+.pycache/
+*.pyc
+*.log
+*.pdf
+.env
+.env.*
