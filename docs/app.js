@@ -31,6 +31,7 @@ const state = {
   scope: "all_day",
   date: "",
   lastKnownToday: "",
+  themePreference: "auto",
 };
 
 const refs = {};
@@ -47,6 +48,7 @@ function bindRefs() {
   refs.liveClock = document.getElementById("live-clock");
   refs.liveDate = document.getElementById("live-date");
   refs.themeStatus = document.getElementById("theme-status");
+  refs.themeToggles = Array.from(document.querySelectorAll("[data-theme-mode]"));
   refs.datasetMeta = document.getElementById("dataset-meta");
   refs.queryDate = document.getElementById("query-date");
   refs.queryWeek = document.getElementById("query-week");
@@ -89,6 +91,12 @@ function bindBaseEvents() {
   refs.queryScope.addEventListener("change", () => {
     state.scope = refs.queryScope.value;
     render();
+  });
+
+  refs.themeToggles.forEach((button) => {
+    button.addEventListener("click", () => {
+      setThemePreference(button.dataset.themeMode || "auto");
+    });
   });
 
   document.getElementById("people-select-all").addEventListener("click", () => {
@@ -156,6 +164,7 @@ function bindBaseEvents() {
 }
 
 function startLiveUi() {
+  state.themePreference = loadThemePreference();
   updateLiveUi();
   window.setInterval(updateLiveUi, 1000);
 }
@@ -183,17 +192,59 @@ function updateLiveUi() {
 }
 
 function applyTheme(now) {
-  const theme = resolveThemeMode(now);
+  const theme = state.themePreference === "auto" ? resolveThemeMode(now) : state.themePreference;
   document.documentElement.dataset.theme = theme;
   if (refs.themeStatus) {
     refs.themeStatus.dataset.theme = theme;
-    refs.themeStatus.textContent = theme === "night" ? "夜间模式" : "日间模式";
+    refs.themeStatus.textContent = describeThemeStatus(theme);
   }
+  syncThemeControls();
 }
 
 function resolveThemeMode(now) {
   const hour = now.getHours();
   return hour >= 7 && hour < 19 ? "day" : "night";
+}
+
+function describeThemeStatus(theme) {
+  const themeLabel = theme === "night" ? "黑夜模式" : "白天模式";
+  return state.themePreference === "auto" ? `跟随时间 · ${themeLabel}` : `手动切换 · ${themeLabel}`;
+}
+
+function setThemePreference(mode) {
+  const normalized = ["auto", "day", "night"].includes(mode) ? mode : "auto";
+  state.themePreference = normalized;
+  saveThemePreference(normalized);
+  applyTheme(new Date());
+}
+
+function syncThemeControls() {
+  refs.themeToggles.forEach((button) => {
+    const active = (button.dataset.themeMode || "auto") === state.themePreference;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", active ? "true" : "false");
+  });
+}
+
+function loadThemePreference() {
+  try {
+    const saved = window.localStorage.getItem("theme-preference");
+    return ["auto", "day", "night"].includes(saved) ? saved : "auto";
+  } catch (error) {
+    return "auto";
+  }
+}
+
+function saveThemePreference(mode) {
+  try {
+    if (mode === "auto") {
+      window.localStorage.removeItem("theme-preference");
+      return;
+    }
+    window.localStorage.setItem("theme-preference", mode);
+  } catch (error) {
+    // Ignore storage failures; auto mode remains the fallback.
+  }
 }
 
 function formatClock(now) {

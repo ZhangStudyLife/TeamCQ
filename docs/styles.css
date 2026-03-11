@@ -103,6 +103,11 @@ html[data-theme="night"] .page-bg {
   align-items: center;
 }
 
+.theme-panel {
+  display: grid;
+  gap: 8px;
+}
+
 .clock-chip,
 .theme-chip {
   display: inline-flex;
@@ -142,6 +147,34 @@ html[data-theme="night"] .page-bg {
 
 .theme-chip {
   font-weight: 700;
+}
+
+.theme-switch {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 18px;
+  border: 1px solid rgba(87, 59, 20, 0.1);
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 12px 24px rgba(87, 59, 20, 0.06);
+}
+
+.theme-toggle {
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--muted);
+  box-shadow: none;
+}
+
+.theme-toggle.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(182, 84, 13, 0.18);
+}
+
+.theme-toggle:hover {
+  transform: translateY(0);
 }
 
 .theme-chip[data-theme="day"] {
@@ -613,6 +646,21 @@ html[data-theme="night"] .empty-state {
   border-color: rgba(255, 219, 181, 0.1);
 }
 
+html[data-theme="night"] .theme-switch {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 219, 181, 0.1);
+}
+
+html[data-theme="night"] .theme-toggle {
+  color: #d9c0a2;
+}
+
+html[data-theme="night"] .theme-toggle.active {
+  color: #1b1714;
+  background: linear-gradient(135deg, #ffd3a4, #ffb66c);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
 html[data-theme="night"] input,
 html[data-theme="night"] select,
 html[data-theme="night"] textarea {
@@ -685,6 +733,10 @@ html[data-theme="night"] .detail-card {
   .status-grid,
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .theme-switch {
+    flex-wrap: wrap;
   }
 }
 

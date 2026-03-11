@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>课表空闲查询</title>
-    <link rel="stylesheet" href="./styles.css?v=20260311e">
-    <script defer src="./app.js?v=20260311e"></script>
+    <link rel="stylesheet" href="./styles.css?v=20260312a">
+    <script defer src="./app.js?v=20260312a"></script>
   </head>
   <body>
     <div class="page-bg"></div>
@@ -18,7 +18,14 @@
               <strong id="live-clock">--:--:--</strong>
               <small id="live-date">----</small>
             </div>
-            <div id="theme-status" class="theme-chip" data-theme="day">日间模式</div>
+            <div class="theme-panel">
+              <div id="theme-status" class="theme-chip" data-theme="day">跟随时间 · 日间模式</div>
+              <div class="theme-switch" role="group" aria-label="主题模式">
+                <button type="button" class="theme-toggle" data-theme-mode="auto">跟随时间</button>
+                <button type="button" class="theme-toggle" data-theme-mode="day">白天</button>
+                <button type="button" class="theme-toggle" data-theme-mode="night">黑夜</button>
+              </div>
+            </div>
           </div>
           <span class="eyebrow">GitHub Pages 静态版</span>
           <h1>课表空闲查询</h1>
