@@ -2,10 +2,10 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>课表空闲查询</title>
-    <link rel="stylesheet" href="./styles.css?v=20260312c">
-    <script defer src="./app.js?v=20260312c"></script>
+    <link rel="stylesheet" href="./styles.css?v=20260312d">
+    <script defer src="./app.js?v=20260312d"></script>
   </head>
   <body>
     <div class="page-bg"></div>
@@ -88,6 +88,7 @@
         <div class="insight-grid">
           <section>
             <h3>本周热力图</h3>
+            <p class="mobile-scroll-hint">手机端可左右滑动查看完整热力图</p>
             <div id="heatmap-root" class="heatmap-wrap"></div>
           </section>
           <section>
@@ -103,6 +104,7 @@
           <span class="section-hint" id="matrix-meta"></span>
         </div>
         <div id="summary-strip" class="summary-strip"></div>
+        <p class="mobile-scroll-hint">手机端可左右滑动查看完整空闲矩阵</p>
         <div class="matrix-wrap">
           <table class="matrix-table">
             <thead id="matrix-head"></thead>
