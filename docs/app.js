@@ -353,7 +353,7 @@ function renderHeatmap(collaboration) {
         <td>
           <a href="#" class="heat-cell" data-week="${item.week}" data-weekday="${item.weekday}" data-scope="${item.scope}" style="--heat:${heat.toFixed(3)}">
             <strong>${item.free_count}/${item.total_count}</strong>
-            <span>可全程</span>
+            <span>完全空</span>
             <small>另 ${item.partial_count} 人有空档</small>
           </a>
         </td>
@@ -380,16 +380,24 @@ function renderRankings(collaboration) {
     refs.rankingsRoot.innerHTML = `<div class="empty-state">至少选择 1 个人后，才会生成排行。</div>`;
     return;
   }
-  refs.rankingsRoot.innerHTML = collaboration.rankings.map((item, index) => `
+  const buildCards = () => collaboration.rankings.map((item, index) => `
     <a href="#" class="ranking-card" data-week="${item.week}" data-weekday="${item.weekday}" data-scope="${item.scope}">
       <span class="ranking-index">${index + 1}</span>
       <div>
         <strong>${item.weekday_label} · ${item.scope_label}</strong>
-        <p>${item.free_count}/${item.total_count} 人可全程，另 ${item.partial_count} 人有空档</p>
+        <p>${item.free_count}/${item.total_count} 人完全空，另 ${item.partial_count} 人有空档</p>
         <span class="muted">${escapeHtml(item.free_people.join("、") || "当前没有整段空闲的人")}</span>
       </div>
     </a>
   `).join("");
+  refs.rankingsRoot.innerHTML = `
+    <div class="ranking-marquee">
+      <div class="ranking-track">
+        <div class="ranking-column">${buildCards()}</div>
+        <div class="ranking-column" aria-hidden="true">${buildCards()}</div>
+      </div>
+    </div>
+  `;
   refs.rankingsRoot.querySelectorAll(".ranking-card").forEach((card) => {
     card.addEventListener("click", (event) => {
       event.preventDefault();
@@ -484,14 +492,8 @@ function buildSnapshot(scope, week, weekday, selectedPeople) {
     .filter((person) => selectedSet.has(person.person_name))
     .map((person) => buildPersonSnapshot(person, week, weekday, periods));
   people.sort((left, right) => {
-    if (left.availability_status === right.availability_status) {
-      return left.person_name.localeCompare(right.person_name, "zh-CN");
-    }
-    if (left.availability_status === "all_free") return -1;
-    if (right.availability_status === "all_free") return 1;
-    if (left.availability_status === "partial" && right.availability_status === "all_busy") return -1;
-    if (left.availability_status === "all_busy" && right.availability_status === "partial") return 1;
-    return 0;
+    if (left.busy_count !== right.busy_count) return left.busy_count - right.busy_count;
+    return left.person_name.localeCompare(right.person_name, "zh-CN");
   });
   const groups = {
     all_free: people.filter((item) => item.availability_status === "all_free").map((item) => item.person_name),
@@ -565,6 +567,8 @@ function buildPersonSnapshot(person, week, weekday, periods) {
     person_name: person.person_name,
     student_id: person.student_id,
     availability_status: availabilityStatus,
+    free_count: freeCount,
+    busy_count: slots.length - freeCount,
     slots,
   };
 }
@@ -572,7 +576,7 @@ function buildPersonSnapshot(person, week, weekday, periods) {
 function buildCollaboration(selectedPeople, week) {
   const rows = [];
   const rankings = [];
-  for (let weekday = 1; weekday <= 7; weekday += 1) {
+  for (let weekday = 1; weekday <= 5; weekday += 1) {
     const items = ["morning", "afternoon", "evening"].map((scope) => {
       const snapshot = buildSnapshot(scope, week, weekday, selectedPeople);
       const groups = snapshot.summary.groups;

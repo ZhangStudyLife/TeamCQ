@@ -251,7 +251,7 @@ class Database:
             else:
                 partial_people.append(person["person_name"])
 
-        people_result.sort(key=lambda item: (item["availability_status"] != "all_free", item["person_name"]))
+        people_result.sort(key=lambda item: (item["busy_count"], item["person_name"]))
         return {
             "people": people_result,
             "summary": {
@@ -285,7 +285,7 @@ class Database:
         scope_order = {scope: index for index, scope in enumerate(scopes)}
         heatmap: list[dict[str, Any]] = []
         rankings: list[dict[str, Any]] = []
-        for weekday in range(1, 8):
+        for weekday in range(1, 6):
             items: list[dict[str, Any]] = []
             for scope in scopes:
                 snapshot = self._build_scope_snapshot(people, meetings, week, weekday, scope)

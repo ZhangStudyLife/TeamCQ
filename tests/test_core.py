@@ -103,7 +103,10 @@ class ImportFlowTest(unittest.TestCase):
         self.assertEqual(filtered["selected_people"], ["徐谦", "原振国"])
         self.assertEqual([person["person_name"] for person in filtered["people"]], ["徐谦", "原振国"])
         self.assertEqual(filtered["summary"]["counts"]["selected"], 2)
+        self.assertEqual([person["busy_count"] for person in filtered["people"]], sorted(person["busy_count"] for person in filtered["people"]))
         self.assertEqual(filtered["collaboration"]["total_people"], 2)
+        self.assertEqual(len(filtered["collaboration"]["heatmap"]), 5)
+        self.assertTrue(all(row["weekday"] <= 5 for row in filtered["collaboration"]["heatmap"]))
         self.assertEqual(len(filtered["collaboration"]["rankings"]), 5)
         self.assertTrue(
             all(
