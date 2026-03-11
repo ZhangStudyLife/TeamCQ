@@ -284,6 +284,25 @@ textarea {
   transition: background 0.28s ease, border-color 0.28s ease, color 0.28s ease;
 }
 
+select {
+  appearance: none;
+  padding-right: 42px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(87, 59, 20, 0.72) 50%),
+    linear-gradient(135deg, rgba(87, 59, 20, 0.72) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(50% - 2px),
+    calc(100% - 14px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+option,
+optgroup {
+  color: var(--text);
+  background: #fff8f0;
+}
+
 textarea {
   resize: vertical;
   min-height: 96px;
@@ -630,6 +649,8 @@ button:hover,
 details summary {
   cursor: pointer;
   font-weight: 700;
+  color: var(--text);
+  transition: color 0.28s ease;
 }
 
 html[data-theme="night"] .clock-chip,
@@ -666,6 +687,23 @@ html[data-theme="night"] select,
 html[data-theme="night"] textarea {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 219, 181, 0.12);
+}
+
+html[data-theme="night"] select {
+  color: var(--text);
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(255, 219, 181, 0.86) 50%),
+    linear-gradient(135deg, rgba(255, 219, 181, 0.86) 50%, transparent 50%);
+}
+
+html[data-theme="night"] option,
+html[data-theme="night"] optgroup {
+  color: #f6eadb;
+  background: #1f1b17;
+}
+
+html[data-theme="night"] details summary {
+  color: #f6eadb;
 }
 
 html[data-theme="night"] .matrix-table thead th {
